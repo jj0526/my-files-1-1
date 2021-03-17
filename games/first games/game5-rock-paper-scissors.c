@@ -31,6 +31,7 @@ int in(){
 
 int main()
 {
+    srand(time(NULL));
 
     int n = 0; // 사람이 이긴 횟수
     int m = 0; // 컴퓨터가 이긴 횟수

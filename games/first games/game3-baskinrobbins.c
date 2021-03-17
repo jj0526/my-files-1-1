@@ -5,6 +5,8 @@
 
 int main()
 {
+    srand(time(NULL));
+
     printf("배스킨 라빈스 게임을 시작합니다!\n");
     printf("먼저 31을 말하는 사람이 지는 게임입니다.\n");
 
