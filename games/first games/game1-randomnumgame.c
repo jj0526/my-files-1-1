@@ -2,7 +2,6 @@
 #include <time.h>
 #include <stdlib.h>
 
-
 int main()
 {
     //랜덤 함수를 이용하여 먼저 숫자가 나오는 사람이 이기는 게임.
@@ -36,6 +35,6 @@ int main()
         }
 
         usleep(2000);
-    } 
+    }
     return 0;
 }

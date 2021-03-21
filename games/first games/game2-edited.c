@@ -7,6 +7,8 @@
 
 int main()
 {
+    srand(time(NULL));
+    
     int j; // j는 자릿수
 
     int n = 0; // n은 입력 받은 수
