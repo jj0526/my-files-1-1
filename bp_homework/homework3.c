@@ -23,5 +23,5 @@ int main(){
     printf("How many tolls per day?");
     scanf("%d", &e);
 
-    printf("%d",a*b*c+d+e);
+    printf("%d",a/c*b+d+e);
 }
