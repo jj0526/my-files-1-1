@@ -23,5 +23,5 @@ int main(){
     printf("How many tolls per day?");
     scanf("%d", &e);
 
-    printf("%d",a/c*b+d+e);
+    printf("your daily cost of driving to work is $%d",a/c*b+d+e);
 }

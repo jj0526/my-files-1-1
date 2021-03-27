@@ -7,7 +7,7 @@ int main(){
     int min;
     int s;
 
-    printf("input the total time elapsed in seconds");
+    printf("input the total time elapsed in seconds\n");
 
     scanf("%d",&sec);
     if (sec>=0)
@@ -20,7 +20,7 @@ int main(){
     }
     else
     {
-        printf("type the num again");
+        printf("type the seconds again");
     }
     return 0;
 }
