@@ -24,4 +24,6 @@ int main(){
     scanf("%d", &e);
 
     printf("your daily cost of driving to work is $%d",a/c*b+d+e);
+
+    return 0;
 }
