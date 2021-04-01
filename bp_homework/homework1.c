@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main(){
+int main()
+{
 
     int sec;
     int hr;
@@ -9,18 +10,23 @@ int main(){
 
     printf("input the total time elapsed in seconds\n");
 
-    scanf("%d",&sec);
-    if (sec>=0)
+    scanf("%d", &sec);
+    if (sec >= 0)
     {
-        hr = sec / 3600;
-        sec= sec - 3600 * hr;
-        min = sec / 60;
-        sec = sec - 60 * min;
-        printf("%d:%d:%d",hr,min,sec);
+        s = sec % 60;
+        sec = sec - s;
+        min = sec % 3600 / 60;
+        hr = (sec - min * 60)/3600;
+
     }
     else
     {
         printf("type the seconds again");
+
+        return 0;
     }
+
+    printf("%d:%d:%d", hr, min, s);
+
     return 0;
 }

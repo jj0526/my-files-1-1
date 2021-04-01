@@ -25,12 +25,12 @@ int main()
         printf("%d번째 게임:%d\n", i, t);
         if (a == t)
         {
-            printf("JJe won!\n");
+            printf("Gun won!\n");
             break;
         }
         else if (b == t)
         {
-            printf("JJ won!\n");
+            printf("L won!\n");
             break;
         }
 
