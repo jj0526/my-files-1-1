@@ -10,7 +10,7 @@ int main()
     int length;
     int count = 0;
 
-    printf("number");
+    printf("number\n");
     scanf("%d", &dig);
 
     if (10000 <= dig && dig <= 99999)

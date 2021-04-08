@@ -7,7 +7,7 @@ int main()
     int num_nine = 0;
     int num;
 
-    printf("number?");
+    printf("number?\n");
     scanf("%d", &num);
 
     if (0 < num && num < 100000)
