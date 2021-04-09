@@ -6,9 +6,9 @@ int main()
     int P;
 
     printf("N^P\n");
-    printf("input the N (float)\n");
+    printf("input a N (float)\n");
     scanf("%f", &N);
-    printf("input the P(integer)\n");
+    printf("input a P (integer)\n");
     scanf("%d", &P);
     float h = N;
 

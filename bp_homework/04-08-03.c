@@ -1,68 +1,42 @@
 #include <stdio.h>
-#include <math.h>
 
-int main()
-{
+int main(){
 
     int num[10];
-
-    int dig;
-    int length;
+    int digit;
     int count = 0;
 
-    printf("type a number\n");
-    scanf("%d", &dig);
+    printf("input a five-digit integer\n");
+    scanf("%d",&digit);
 
-    if (10000 <= dig && dig <= 99999)
+    if (9999<digit && digit<100000)
     {
-        length = 5;
-    }
-    else if (1000 <= dig && dig <= 9999)
-    {
-        length = 4;
-    }
-    else if (100 <= dig && dig <= 999)
-    {
-        length = 3;
-    }
-    else if (10 <= dig && dig <= 99)
-    {
-        length = 2;
-    }
-    else
-    {
-        printf("type again");
-        return 0;
-    }
-
-    for (int i = 0; i < length; i++)
-    {
-        num[i] = dig % 10;
-        dig = dig / 10;
-
-        /*
-        num[i] = dig / pow(10, length - i - 1);
-        dig = dig - num[i] * pow(10, length - i - 1);
-        */
-    }
-
-    for (int i = 0; i < length / 2; i++)
-    {
-        if (num[i] == num[length - i - 1])
+        for (int i = 0; i<5; i++)
         {
+            num[i] = digit % 10;
+            digit = digit / 10;
+        }
+        for (int i = 0; i<2; i++)
+        {
+            if (num[i] == num[4-i])
+            {
             count++;
+            }
+        }
+        if (count == 2)
+        {
+            printf("It's a palindrome");
         }
         else
         {
-            printf("It's not palindrome.");
-            return 0;
+            printf("It's not a palindrome");
         }
     }
-    
-    if (count == length / 2)
+    else
     {
-        printf("It's palindrome");
+        printf("input the number again");
     }
-    
+
     return 0;
+
 }
