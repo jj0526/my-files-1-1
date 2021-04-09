@@ -10,7 +10,7 @@ int main()
     int length;
     int count = 0;
 
-    printf("number\n");
+    printf("type a number\n");
     scanf("%d", &dig);
 
     if (10000 <= dig && dig <= 99999)
@@ -37,9 +37,15 @@ int main()
 
     for (int i = 0; i < length; i++)
     {
+        num[i] = dig % 10;
+        dig = dig / 10;
+
+        /*
         num[i] = dig / pow(10, length - i - 1);
         dig = dig - num[i] * pow(10, length - i - 1);
+        */
     }
+
     for (int i = 0; i < length / 2; i++)
     {
         if (num[i] == num[length - i - 1])
@@ -52,9 +58,11 @@ int main()
             return 0;
         }
     }
+    
     if (count == length / 2)
     {
         printf("It's palindrome");
     }
+    
     return 0;
 }

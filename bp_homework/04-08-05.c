@@ -1,18 +1,34 @@
 #include <stdio.h>
 
-int main(){
+int main()
+{
     float N;
     int P;
 
-    printf("type the N\n");
-    scanf("%f",&N);
-    printf("input the P\n");
+    printf("N^P\n");
+    printf("input the N (float)\n");
+    scanf("%f", &N);
+    printf("input the P(integer)\n");
     scanf("%d", &P);
-    int h = N;
+    float h = N;
 
-    for (int i = 0; i<P-1; i++)
+    if (N == 0 && P == 0)
     {
-        N = N * h;
+        printf("type the number again.");
     }
-    printf("%f",N);
+    else if (N != 0 && P == 0)
+    {
+        N = 1;
+        printf("%f", N);
+    }
+    else if (P != 0)
+    {
+        for (int i = 0; i < P - 1; i++)
+        {
+            N = N * h;
+        }
+        printf("%f", N);
+    }
+
+    return 0;
 }

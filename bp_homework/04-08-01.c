@@ -7,9 +7,9 @@ int main()
     float money;
     float salary;
 
-    printf("how many hours do you work for a week?");
+    printf("How many hours do you work for a week?");
     scanf("%d", &work_hr);
-    printf("how much do you make per hour?");
+    printf("How much do you make per hour?");
     scanf("%f", &money);
 
     if (work_hr > 0 && money > 0)
@@ -23,7 +23,7 @@ int main()
             work_hr = work_hr - 40;
             salary = 40 * money + work_hr * money * 1.5;
         }
-        printf("Salary is $%.2f", salary);
+        printf("Your salary is $%.2f", salary);
     }
     else
     {
