@@ -27,7 +27,7 @@ int main()
         {
             N = N * h;
         }
-        printf("%f", N);
+        printf("%.5f", N);
     }
 
     return 0;
