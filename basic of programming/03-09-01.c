@@ -7,10 +7,6 @@ void main()
 
     printf("Welcome to C!\n");
     
-<<<<<<< Updated upstream
-=======
-    printf("YES");
->>>>>>> Stashed changes
     return 0;
 
 }
