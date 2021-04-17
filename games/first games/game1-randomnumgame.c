@@ -12,9 +12,17 @@ int main()
     int b;
     int i = 0;
 
-    printf("choose a number.");
+    char P[20];
+    char Q[20];
+
+    printf("What's your name?(Player A)\n");
+    scanf("%c",P);
+    printf("What's your name?(Player B)\n");
+    scanf("%c",Q);
+
+    printf("choose a number, %c", P);
     scanf("%d", &a);
-    printf("choose a number.");
+    printf("choose a number, %c", Q);
     scanf("%d", &b);
 
     while (1)
@@ -25,12 +33,12 @@ int main()
         printf("%d번째 게임:%d\n", i, t);
         if (a == t)
         {
-            printf("Gun won!\n");
+            printf("%c won!\n",P);
             break;
         }
         else if (b == t)
         {
-            printf("L won!\n");
+            printf("%c won!\n", Q);
             break;
         }
 
