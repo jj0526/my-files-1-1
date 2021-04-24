@@ -11,6 +11,6 @@ int main(){
     printf("a=%d, b= %d\n", a,b);        //   3   3
     printf("a=%d,b=%d\n",a++,b++);       //   3   3 
     printf("a=%d,b=%d\n",a,b);           //   4   4
-
+    printf("%d, %d",a,b);
     return 0;
 }
