@@ -57,7 +57,7 @@ int main(){
     {
         printf("%d,", b[j]);
     }
-    printf("%d",b[i]);             // why b[j] is not working
+    printf("%d",b[i]);             // why b[j] is not working cus of int j i think
 
     return 0;
 
