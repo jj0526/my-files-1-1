@@ -29,6 +29,7 @@ int main()
     if (first == 0)
     {
         printf("you're starting first!\n");
+
         while (1)
         {
             num_c = 0;
@@ -47,7 +48,7 @@ int main()
 
             the_num = i + 1;
 
-            for (int j = 0; j < dig_count + 1; j++) //jari[j] : the num of each position
+            for (int j = 0; j < dig_count + 2; j++) //jari[j] : the num of each position
             {
                 jari[j] = the_num % 10;
                 the_num = the_num / 10;
@@ -63,20 +64,22 @@ int main()
                 scanf("%d", &player[i]);
                 if (player[i] != i + 1)
                 {
-                    break;
+                    break; // when it's 31, it think its int
                 }
             }
             else if (num_c == 1) //if there's one of them
             {
                 scanf(" %c", &first_c[i]);
+
                 if (first_c[i] != 'c')
                 {
-                    break;
+                   break;
                 }
             }
             else if (num_c == 2) //if there's two of them
             {
                 scanf(" %c%c", &first_c[i], &second_c[i]);
+
                 if ((first_c[i] != 'c') || (second_c[i] != 'c'))
                 {
                     break;
@@ -85,11 +88,13 @@ int main()
             else if (num_c == 3) // if there's three of them
             {
                 scanf(" %c%c%c", &first_c[i], &second_c[i], &third_c[i]);
+
                 if ((first_c[i] != 'c') || (second_c[i] != 'c') || (third_c[i] != 'c'))
                 {
                     break;
                 }
             }
+            
 
             //the oponent's turn from here
 
@@ -117,10 +122,11 @@ int main()
 
             the_num = i + 1;
 
-            for (int j = 0; j < dig_count + 1; j++)
+            for (int j = 0; j < dig_count + 2; j++)
             {
                 jari[j] = the_num % 10;
                 the_num = the_num / 10;
+
                 if ((jari[j] % 3 == 0) && (jari[j] != 0))
                 {
                     num_c++;
@@ -133,11 +139,14 @@ int main()
             else
             {
                 printf("the opponent : ");
+
                 for (int j = 0; j < num_c; j++)
                 {
-                    printf("c\n");
+                    printf("c");
                 }
+                printf("\n");
             }
+            
             for (int j = 0; j < 3; j++)
             {
                 jari[j] = NULL;
@@ -145,13 +154,13 @@ int main()
             i++;
         }
     }
-    else if (first == 1)
+    else if (first == 1) // starting second
     {
-        // when it's 10n + 7 it shows me c
         printf("you're starting second\n");
 
         while (1)
         {
+            num_c = 0;
 
             the_num = i + 1;
 
@@ -167,10 +176,11 @@ int main()
 
             the_num = i + 1;
 
-            for (int j = 0; j < dig_count + 1; j++)
+            for (int j = 0; j < dig_count + 2; j++)
             {
                 jari[j] = the_num % 10;
                 the_num = the_num / 10;
+
                 if ((jari[j] % 3 == 0) && (jari[j] != 0))
                 {
                     num_c++;
@@ -180,14 +190,17 @@ int main()
             {
                 printf("the opponent : %d\n", i + 1);
             }
-            else
+            else if (num_c>0)
             {
                 printf("the opponent : ");
+
                 for (int j = 0; j < num_c; j++)
                 {
-                    printf("c\n");
+                    printf("c");
                 }
+                printf("\n");
             }
+
             for (int j = 0; j < 3; j++)
             {
                 jari[j] = NULL;
@@ -199,10 +212,6 @@ int main()
             dig_count = 0;
 
             the_num = i + 1;
-
-            num_c = 0;
-
-            dig_count = 0;
 
             for (int j = 0; j < 3; j++) //initializing jari[0]-jari[2]
             {
@@ -221,7 +230,7 @@ int main()
 
             the_num = i + 1;
 
-            for (int j = 0; j < dig_count + 1; j++) //jari[j] : the num of each position
+            for (int j = 0; j < dig_count + 2; j++) //jari[j] : the num of each position
             {
                 jari[j] = the_num % 10;
                 the_num = the_num / 10;
@@ -244,6 +253,7 @@ int main()
             else if (num_c == 1) //if there's one of them
             {
                 scanf(" %c", &first_c[i]);
+
                 if (first_c[i] != 'c')
                 {
                     break;
@@ -252,6 +262,7 @@ int main()
             else if (num_c == 2) //if there's two of them
             {
                 scanf(" %c%c", &first_c[i], &second_c[i]);
+
                 if ((first_c[i] != 'c') || (second_c[i] != 'c'))
                 {
                     break;
@@ -260,11 +271,13 @@ int main()
             else if (num_c == 3) // if there's three of them
             {
                 scanf(" %c%c%c", &first_c[i], &second_c[i], &third_c[i]);
+
                 if ((first_c[i] != 'c') || (second_c[i] != 'c') || (third_c[i] != 'c'))
                 {
                     break;
                 }
             }
+            
             i++;
 
         }
