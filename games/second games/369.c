@@ -7,9 +7,7 @@ int main()
 
     int player[1000]; //what player typed
     int first;        // starting first or second
-    int dig;
     int dig_count; // count of i
-    int temp;
     int num_c = 0;       //how many Cs
     char first_c[1000];  //<c>
     char second_c[1000]; //c<c>
@@ -23,6 +21,7 @@ int main()
     scanf("%d", &first);
 
     //when i say c (31) it escapes from the loop.
+
     int i = 0;
     int count = 0;
 
@@ -32,6 +31,12 @@ int main()
 
         while (1)
         {
+            if ((i==998)||(i==997))
+            {
+                printf("you reached 999!\n★★★YOU WIN★★★");
+                return 0;
+            }
+
             num_c = 0;
 
             dig_count = 0;
@@ -160,6 +165,12 @@ int main()
 
         while (1)
         {
+            if ((i==998)||(i==997))
+            {
+                printf("you reached 999!\n★★★YOU WIN★★★");
+                return 0;
+            }
+
             num_c = 0;
 
             the_num = i + 1;
@@ -282,6 +293,7 @@ int main()
 
         }
     }
+
     printf("you've tried %d times!", (i + 1) / 2);
 
     return 0;
