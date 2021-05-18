@@ -26,7 +26,7 @@ int main()
         {
             if (((i + 1) % 3 == 0) || ((i + 1) / 10) % 3)
             {
-                three[i] =
+                three[i] = 
             }
             else
             {
