@@ -20,5 +20,6 @@ int main(){
         putchar(vowel[i]);
 
     }
+    return 0;
 
 }

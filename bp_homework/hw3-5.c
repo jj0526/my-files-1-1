@@ -3,6 +3,7 @@
 int main(){
 
     int value[20];
+    printf("Input 10 numbers\n");
 
     for (int i = 0; i<10; i++){
         scanf("%d", &value[i]);
