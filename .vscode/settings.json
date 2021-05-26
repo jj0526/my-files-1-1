@@ -1,6 +1,8 @@
 {
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
-        "04-08-04.C": "cpp"
+        "*.c": "c",
+        "04-08-04.C": "cpp",
+        "05-27-01.C": "cpp"
     }
 }
