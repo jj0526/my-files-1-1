@@ -5,9 +5,11 @@ int main(){
 
     int num1 = 10;
 
+    printf("%d\n", num1); //10
+
     change(&num1);
 
-    printf("%d\n", num1);
+    printf("%d\n", num1); // 15
 
     return 0;
 }
