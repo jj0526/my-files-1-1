@@ -46,7 +46,6 @@ int main(){
     }
     int len3 = strlen(answer);
 
-
     for (int i = 0; i<len3+1; i++){
         printf("%c", answer[i]);
     }
