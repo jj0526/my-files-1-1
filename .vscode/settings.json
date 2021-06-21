@@ -3,7 +3,8 @@
     "files.associations": {
         "*.c": "c",
         "04-08-04.C": "cpp",
-        "05-27-01.C": "cpp"
+        "05-27-01.C": "cpp",
+        "stdio.h": "c"
     },
     "python.pythonPath": "C:\\Users\\01077\\anaconda3\\python.exe"
 }
