@@ -41,7 +41,7 @@ struct node* make_node(int data, struct node*next){
 }
 
 struct single_list* make_list(){
-    struct single_list* returned_value = (struct single_list*)malloc(sizeof(struct singled_list));
+    struct single_list* returned_value = (struct single_list*)malloc(sizeof(struct single_list));
     returned_value -> head = NULL;
     returned_value -> current = NULL;
     returned_value -> previous = NULL;
@@ -94,7 +94,7 @@ int append(struct single_list* target, int data){
     if (target == NULL){
         return 0;
     }
-    struct node*temp_node ;
+    struct node*temp_node;
     if (target -> current != NULL ){
         temp_node = make_node(data, target -> current -> next);
     }
@@ -108,9 +108,52 @@ int append(struct single_list* target, int data){
     return 1;
 }
 
-int print_list(struct single_list* target);
+int print_list(struct single_list* target){
+    if (target == NULL){
+        return 0;
+    }
+    if (target -> head == NULL){
+        printf("This list is empty\n");
+        return 1;
+    }
+    target -> current = target -> head;
+    target -> previous = NULL;
+    while (target -> current != NULL){
+        printf("%d\t", target -> current -> data);
+        target -> previous = target -> current;
+        target -> current = target -> current -> next;
+    }
+    printf("\n");
+    target -> current = target -> head;
+    target -> previous = NULL;
 
-int delete_list(struct single_list* target);
+    return 1;
+
+}
+
+int delete_list(struct single_list* target){
+    if (target == NULL){
+        return 0;
+    }
+    if (target -> head == NULL){
+        printf("This list is empty already\n");
+        return 1;
+    }
+    target -> current = target -> head;
+    target -> previous = NULL;
+
+    while (target -> current != NULL){
+        
+        target -> previous = target -> current;
+        target -> current = target -> current -> next;
+        free(target -> previous);
+    }
+
+    target -> previous = NULL;
+    target -> head = NULL;
+    return 1;
+
+}
 
 int delete_current_node(struct single_list* target){
     if (target == NULL){
@@ -124,7 +167,7 @@ int delete_current_node(struct single_list* target){
         target -> head = target -> head -> next;
     }
     else{
-        target -> previous -> next = target -> target -> current -> next;
+        target -> previous -> next = target -> current -> next;
     }
     target -> current = target -> current -> next;
 
@@ -137,6 +180,45 @@ int delete_current_node(struct single_list* target){
     return 1;
 }
 
-int return_current_data(struct single_list* target, int *issuccess);
+int return_current_data(struct single_list* target, int *issuccess){
+    if (target == NULL){
+        *issuccess = 0;
+        return 0;
+    }
+    
+    *issuccess = 1;
+    if (target -> current != NULL){
+        return target -> current -> data;
+    }
+    else{
+        *issuccess = 0;
+        return 0;
+    }
+}
 
-int search_data(struct single_list* target, int data);
+int search_data(struct single_list* target, int data){
+    if (target == NULL){
+        return 0;
+    }
+    if (target -> head == NULL){
+        return 0;
+    }
+    target -> current = target -> head;
+    target -> previous = NULL;
+
+    while (target -> current != data){
+        target -> previous = target -> current;
+        target -> current = target -> current -> next; 
+        if (target -> current == NULL){
+            target -> current = target -> head;
+            target -> previous = NULL;
+            return 0;
+        }
+    }
+    return 1;
+
+}
+
+int main(){
+    return 0;
+}
