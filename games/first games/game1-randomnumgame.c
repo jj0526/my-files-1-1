@@ -16,13 +16,13 @@ int main()
     char Q[20];
 
     printf("What's your name?(Player A)\n");
-    scanf("%c",P);
+    gets(P);
     printf("What's your name?(Player B)\n");
-    scanf("%c",Q);
+    gets(Q);
 
-    printf("choose a number, %c", P);
+    printf("choose a number (1-1000), %s\n", P);
     scanf("%d", &a);
-    printf("choose a number, %c", Q);
+    printf("choose a number (1-1000), %s\n", Q);
     scanf("%d", &b);
 
     while (1)
