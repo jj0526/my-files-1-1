@@ -56,7 +56,7 @@ int main()
 
     printf("3선승제입니다! you win if you win 3 times first!\n");
 
-    printf("먼저 닉네임을 입력해 주십시오. type you name.\n");
+    printf("먼저 닉네임을 입력해 주십시오. type your name.\n");
 
     scanf("%s", name);
 

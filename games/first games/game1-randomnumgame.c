@@ -33,12 +33,12 @@ int main()
         printf("%d번째 게임:%d\n", i, t);
         if (a == t)
         {
-            printf("%c won!\n",P);
+            printf("%s won!\n",P);
             break;
         }
         else if (b == t)
         {
-            printf("%c won!\n", Q);
+            printf("%s won!\n", Q);
             break;
         }
 
