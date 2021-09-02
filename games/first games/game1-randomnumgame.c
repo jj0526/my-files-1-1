@@ -29,8 +29,8 @@ int main()
     {
         i++;
 
-        int t = rand() % 1001;
-        printf("%d번째 게임:%d\n", i, t);
+        int t = rand() % 1000 + 1;
+        printf("%dth game : %d\n", i, t);
         if (a == t)
         {
             printf("%s won!\n",P);
