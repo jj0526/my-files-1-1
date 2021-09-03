@@ -7,8 +7,10 @@ int main(){
     int maxagecnt=0, minagecnt=0, maxscorecnt=0, minscorecnt=0;
     int maxscoregrp[5], minscoregrp[100];
 
+    printf("input the age and score of the student\n");
+
     for (int i = 0; i<5; i++){
-        scanf("%d %d", &age[i], &scores[i]);
+        scanf("%d %d", &age[i], &scores[i]);//saves 2 data of age and score
         if ((age[i]<=0)||(scores[i]<=0)){//if age<=0(international age) or the score<=0
             printf("input the age and score again\n");
             i--;
@@ -36,11 +38,11 @@ int main(){
         if ( maxscore < scores[i] ){
             maxscorecnt = 0;
             maxscore = scores[i];        // new max age found
-            maxscoregrp[maxagecnt] = i;  //save the age index
+            maxscoregrp[maxscorecnt] = i;  //save the age index
         }
         else if (maxscore == scores[i]){
             maxscorecnt++;               //tie max age found
-            maxscoregrp[maxagecnt] = i;  //save the age index
+            maxscoregrp[maxscorecnt] = i;  //save the age index
         }
         if (minscore > scores[i]){
             minscorecnt = 0;
@@ -52,8 +54,8 @@ int main(){
             minscoregrp[minscorecnt] = i; //save the age index
         }
     }
-    printf("%d %d %d %d\n", maxagecnt, minagecnt, maxscorecnt, minscorecnt);
-    for (int i = 0; i<maxagecnt+1; i++){
+    
+    for (int i = 0; i<maxagecnt+1; i++){// print the data
         printf("score for an oldest student = %d\n", scores[maxagegrp[i]]);
     }
     for (int i = 0; i<minagecnt+1; i++){
