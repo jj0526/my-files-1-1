@@ -60,7 +60,7 @@ int main()
 
     scanf("%s", name);
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 15; i++)
     {
 
         printf("무엇을 내시겠습니까? pick rock, paper or scissors.\n"); //사람이 먼저 내기
