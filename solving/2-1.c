@@ -21,6 +21,6 @@ void strcopy(char string1[], int size, char string2[]){
     }
     string1[i] = '\0';
 
-    puts(string1);
+    puts(string1); //prints string1
 
 }
