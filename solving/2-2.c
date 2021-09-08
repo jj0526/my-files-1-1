@@ -8,7 +8,7 @@ int main(){
 
     gets(string);                                //input a string
 
-    int char_cnt = character_count(string, size);//
+    int char_cnt = character_count(string, size);//functions
 
     printf("%d", char_cnt);
 
