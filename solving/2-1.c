@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 void strcopy(char string1[], int size, char string2[]);
 
 int main(){

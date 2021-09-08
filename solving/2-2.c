@@ -6,6 +6,8 @@ int main(){
     char string[100];
     int size = 100;
 
+    printf("what's the sentence?\n");
+
     gets(string);                                //input a string
 
     int char_cnt = character_count(string, size);//functions
